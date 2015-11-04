@@ -1,0 +1,59 @@
+[core]
+  excludesfile = /Users/richard/.gitignore
+  quotepath = false
+  autocrlf = false
+  preloadindex = true
+
+[user]
+  name = Richard Rowe
+  email = arch.richard@gmail.com
+
+[github]
+  user = richardrowe
+
+[hub]
+  protocol = https
+
+[log]
+  abbrevCommit = true
+  decorate = true
+  date = relative
+
+[format]
+  pretty = format:%C(yellow)%h %<|(22) %Cgreen%aN %>>(22) %Cblue%ad %Cred%d %Creset%s
+
+[push]
+  default = current
+
+[pull]
+  rebase = false
+
+[color]
+  ui = auto
+
+[diff]
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+
+[mergetool]
+  prompt = false
+
+[merge]
+  tool = Kaleidoscope
+
+[alias]
+  accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
+  accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
+  issues = !ghi
+  browse = !hub browse
+  hub = !hub
+  ctags = !.git/hooks/ctags
+
+[init]
+  templatedir = ~/.git_template
+
+[pack]
+	windowMemory = 10m
+	packSizeLimit = 20m

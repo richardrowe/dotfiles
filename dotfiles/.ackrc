@@ -1,0 +1,12 @@
+--type-add=js=.coffee
+--type-add=css=.styl
+--type-set=coffee=.coffee
+--type-set=stylus=.styl
+--smart-case
+--ignore-dir=.git
+--ignore-dir=node_modules
+--ignore-dir=.source
+--ignore-dir=tmp
+--ignore-file=is:.tags
+--ignore-file=is:.log
+--ignore-file=is:.log*
