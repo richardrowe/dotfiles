@@ -1998,7 +1998,7 @@
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>WebKitDefaultFontSize</key>
-	<integer>11</integer>
+	<integer>12</integer>
 	<key>WebKitStandardFont</key>
 	<string>.Lucida Grande UI</string>
 	<key>Window Arrangements</key>
