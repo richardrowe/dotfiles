@@ -1935,7 +1935,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/richardrowe/.dotfiles/lib/iterm2</string>
+	<string>/Users/richard/.dotfiles/lib/iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
