@@ -9,3 +9,6 @@ rsync --exclude ".git/" \
 
 # Update iterm2 Preferences
 sh ./iterm2.sh
+
+# Update wallpaper
+sh ./wallpaper.sh
