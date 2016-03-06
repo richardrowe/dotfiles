@@ -4,7 +4,7 @@ set -x TERM screen-256color
 set -x GITHUB_USER richardrowe
 
 # Vim
-set -x EDITOR vim
+#set -x EDITOR vim
 
 # Virtualenv
 if command -v virtualenv > /dev/null
