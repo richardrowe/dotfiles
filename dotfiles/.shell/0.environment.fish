@@ -19,9 +19,9 @@ set -x PATH ./bin $PATH
 
 # RUBY
 if command -v rbenv > /dev/null
-  set -x PATH $HOME/.rbenv/shims $HOME/.rbenv/shims/bin $PATH
+  set -x PATH $HOME/.rbenv/shims $PATH
   rbenv rehash >/dev/null ^&1
 end
 
 # Browser testing
-set -x CHROME_BIN /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+set -x CHROME_BIN ~/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
