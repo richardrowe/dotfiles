@@ -2,7 +2,7 @@
 set -e
 
 plist="com.googlecode.iterm2.plist"
-plist_source_path="$HOME/.dotfiles/lib/iterm2/$plist"
+plist_source_path="$HOME/.deploy/dotfiles/lib/iterm2/$plist"
 installed_plist="$HOME/Library/Preferences/$plist"
 
 log()   { printf -- "-----> $*\n" ; return $? ; }
