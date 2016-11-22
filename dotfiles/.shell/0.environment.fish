@@ -3,6 +3,10 @@ set -x FISH_CLIPBOARD_CMD pbcopy
 set -x TERM screen-256color
 set -x GITHUB_USER richardrowe
 
+set -x HOMEBREW_NO_ANALYTICS 1
+set -x HOMEBREW_NO_INSECURE_REDIRECT 1
+set -x HOMEBREW_CASK_OPTS --require-sha
+
 # Vim
 #set -x EDITOR vim
 
