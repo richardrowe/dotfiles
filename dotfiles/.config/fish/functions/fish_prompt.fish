@@ -1,26 +1,36 @@
-function fish_prompt --description 'Write out the prompt'
-	
-  set -l last_status $status
+set -g CMD_DURATION 0
 
-  if not set -q __fish_prompt_normal
-    set -g __fish_prompt_normal (set_color normal)
-  end
+function flash_fst; set_color -o fa0; end
+function flash_snd; set_color -o C00; end
+function flash_trd; set_color -o 666; end
+function flash_dim; set_color -o 333; end
+function flash_off; set_color normal; end
+function bc; command bc -l $argv; end
 
-  if set -q VIRTUAL_ENV
-      echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
-  end
+function fish_prompt
+  set -l code $status
 
-  # PWD
-  set_color $fish_color_cwd
-  echo -n (prompt_pwd)
-  set_color normal
+  set -l prompt (prompt_pwd)
+  set -l base (basename "$prompt")
 
-  printf '%s ' (__fish_git_prompt)
-
-  if not test $last_status -eq 0
-  set_color $fish_color_error
-  end
-
-  echo -n '$ '
-
+  printf (flash_snd)"( "(begin
+    if test "$PWD" = "/"
+      test $code -eq 0; and echo (flash_fst)"/"(flash_off); or echo (flash_dim)"/"(flash_off)
+    else
+      echo ""
+    end
+  end)(echo "$prompt" \
+  | sed "s|~|"(begin
+      test $code -eq 0; and echo (flash_fst); or echo (flash_dim)
+    end)"⌁"(flash_off)"|g" \
+  | sed "s|/|"(flash_snd)" ) "(flash_off)"|g" \
+  | sed "s|"$base"|"(flash_fst)$base(flash_off)" |g")(flash_snd)(begin
+    test "$PWD" = "$HOME"; and echo " "; echo ""
+    end)(begin
+      if test "$PWD" = "/"
+        echo ""
+      else
+        echo ") "
+      end
+    end)(flash_off)
 end
