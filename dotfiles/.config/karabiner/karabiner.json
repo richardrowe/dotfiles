@@ -37,14 +37,12 @@
             "selected": true,
             "simple_modifications": {
                 "caps_lock": "left_control",
-                "tab": "left_option",
-                "escape": "grave_accent_and_tilde"
+                "escape": "grave_accent_and_tilde",
+                "f": "fn"
             },
             "standalone_keys": {
               "caps_lock": "escape",
-              "left_shift": ["left_shift", "9"],
-              "right_shift": ["right_shift", "0"],
-              "tab": "tab"
+              "f": "f"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
