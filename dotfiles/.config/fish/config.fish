@@ -1,7 +1,7 @@
 set -x SHELL /usr/local/bin/fish
 
 set fish_color_autosuggestion 262626
-set fish_color_command 5f5f87
+set fish_color_command C8FF57
 set fish_color_comment red
 set fish_color_cwd 6c6c6c
 set fish_color_cwd_root red
@@ -13,7 +13,7 @@ set fish_color_match 005f87
 set fish_color_normal normal
 set fish_color_operator cyan
 set fish_color_param eeeeee
-set fish_color_quote 5f8700
+set fish_color_quote FBFFB4
 set fish_color_redirection normal
 set fish_color_search_match 262626\x1e\x2d\x2dbackground\x3dff00ff
 set fish_color_status red
